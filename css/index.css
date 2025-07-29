@@ -1,0 +1,291 @@
+.personal-information {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.avatar {
+    height: 112px;
+    width: 112px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+.about-author {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.name {
+    color: var(--titleist);
+}
+
+.role {
+    color: var(--textual);
+}
+
+.location-box {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+}
+
+.city {
+    color: var(--textual);
+}
+
+.metrics-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+}
+
+hr {
+    width: 1px;
+    border-radius: 100px;
+    background: var(--backlighting);
+    border: none;
+}
+
+.metric-number {
+    color: var(--titleist);
+}
+
+.metric-text {
+    color: var(--textual);
+}
+
+.contact-me {
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--background);
+    cursor: pointer;
+}
+
+.about-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.title-text {
+    color: var(--titleist);
+}
+
+.description-text {
+    color: var(--textual);
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.tag-list {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.tag-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tag-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    white-space: nowrap;
+    padding: 4px 12px;
+    background: var(--tag-background);
+    border-radius: 8px;
+}
+
+.tag-item p {
+    color: var(--accent);
+}
+
+.project-list {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.project-list::-webkit-scrollbar {
+  display: none;
+}
+
+.project-item {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    height: 180px;
+    width: 180px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--content);
+    scroll-snap-align: start;
+}
+
+.project-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.no-experience {
+    color: var(--textual);
+    text-align: center;
+}
+
+#feedbackPopup {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: var(--blackout);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+#feedbackPopup.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#popupElements {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+#popupElements.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.handlebar {
+    display: none;
+    height: 4px;
+    width: 45%;
+    background: var(--overlay-background);
+    border-radius: 100px;
+}
+
+.popup-model {
+    padding: 14px 20px;
+    background: var(--overlay-background);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.logo-contact {
+    height: 58px;
+    width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+.telegram-color {
+    fill: var(--telegram-color);
+}
+
+.telegram-background {
+    background: var(--telegram-background);
+}
+
+.whatsapp-color {
+    fill: var(--whatsapp-color);
+}
+
+.whatsapp-background {
+    background: var(--whatsapp-background);
+}
+
+.mail-color {
+    fill: var(--mail-color);
+}
+
+.mail-background {
+    background: var(--mail-background);
+}
+
+.phone-color {
+    fill: var(--phone-color);
+}
+
+.phone-background {
+    background: var(--phone-background);
+}
+
+.title-contact {
+    color: var(--textual);
+}
+
+@media (max-width: 492px) {
+    .handlebar {
+        display: flex;
+    }
+    #feedbackPopup {
+        align-items: flex-end;
+    }
+    #popupElements {
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    #feedbackPopup.active {
+        opacity: 1;
+    }
+    #popupElements.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .popup-model {
+        margin-bottom: 16px;
+    }
+}
