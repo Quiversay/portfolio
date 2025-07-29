@@ -160,7 +160,7 @@ ol {
 
 @font-face {
     font-family: 'Inter Variable';
-    src: url('assets/fonts/InterVariable.woff2') format('woff2');
+    src: url('../assets/fonts/InterVariable.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
