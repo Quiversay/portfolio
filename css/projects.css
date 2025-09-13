@@ -4,7 +4,7 @@
     height: 1px;
     width: 0%;
     background: var(--accent);
-    z-index: 9999;
+    z-index: 9998;
     transition: width 0.1s ease;
 }
 
@@ -60,10 +60,10 @@ span {
 }
 
 #overlay.active #zoomed-img {
-  transform: scale(1);
-  opacity: 1;
-  object-fit: cover;
-  background: var(--content);
+    transform: scale(1);
+    opacity: 1;
+    object-fit: cover;
+    background: var(--content);
 }
 
 #zoomed-img {
@@ -74,6 +74,10 @@ span {
     transform: scale(0.95);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#zoomed-img.no-transition {
+    transition: none !important;
 }
 
 .title-text {
@@ -137,12 +141,13 @@ span {
 }
 
 .photo-context {
-    width: 100%;
+    width: 95%;
     aspect-ratio: 2 / 1;
     object-fit: cover;
     background: var(--content);
     border-radius: 16px;
     cursor: pointer;
+    transition: opacity 0.4s ease;
 }
 
 .tool-list {
@@ -159,7 +164,7 @@ span {
 }
 
 .tool-list::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .tool-item {

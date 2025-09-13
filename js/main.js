@@ -1,3 +1,14 @@
+/* Splash Screen */
+
+window.addEventListener('load', function() {
+  const splash = document.getElementById('splash');
+  const content = document.getElementById('content');
+    setTimeout(function () {
+    splash.style.opacity = 0;
+    content.style.opacity = 1;
+  }, 1500);
+})
+
 /* Открытие фотки */
 
 const images = document.querySelectorAll('.photo-context');
@@ -5,6 +16,14 @@ const overlay = document.getElementById('overlay');
 const zoomedImg = document.getElementById('zoomed-img');
 
 let lastClickedImage = null;
+
+if (zoomedImg) {
+  zoomedImg.classList.add('no-transition');
+}
+
+if (overlay) {
+  overlay.classList.remove('active');
+}
 
 images.forEach(img => {
   img.addEventListener('click', () => {
@@ -113,12 +132,14 @@ document.addEventListener('DOMContentLoaded', () => {
 /* Открытие Popup языка */
 
 const lenguageSelector = document.getElementById('lenguageSelector');
+const lenguageContainer = document.querySelector('.lenguage-container');
 const lenguageMenu = document.getElementById('lenguageMenu');
 const savedLang = localStorage.getItem('language') || 'en';
 
 lenguageSelector.addEventListener('click', (e) => {
   e.stopPropagation();
   lenguageMenu.classList.toggle('active');
+  lenguageContainer.classList.toggle('active');
 });
 
 lenguageMenu.addEventListener('click', (e) => {
@@ -127,6 +148,7 @@ lenguageMenu.addEventListener('click', (e) => {
 
 document.addEventListener('click', () => {
   lenguageMenu.classList.remove('active');
+  lenguageContainer.classList.remove('active');
 });
 
 /* Открытие Popup обратной связи */
@@ -181,5 +203,3 @@ function checkWrapAndHideLastDot() {
 
 window.addEventListener("load", checkWrapAndHideLastDot);
 window.addEventListener("resize", checkWrapAndHideLastDot);
-
-

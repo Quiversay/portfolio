@@ -75,6 +75,13 @@ hr {
     text-align: center;
     color: var(--background);
     cursor: pointer;
+    box-shadow: 0px 2px 12px rgba(83, 67, 209, 0.24), inset 0px 2px 1px #6F5DFF;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.contact-me:hover {
+    box-shadow: 0px 2px 16px rgba(83, 67, 209, 0.46), inset 0px 2px 1px #6F5DFF;
 }
 
 .about-block {
@@ -111,7 +118,7 @@ hr {
 }
 
 .tag-list::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .tag-item {
@@ -139,14 +146,14 @@ hr {
 }
 
 .project-list::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .project-item {
     flex: 0 0 auto;
     white-space: nowrap;
     height: 180px;
-    width: 180px;
+    width: 270px;
     border-radius: 16px;
     overflow: hidden;
     background: var(--content);
@@ -265,27 +272,4 @@ hr {
 
 .title-contact {
     color: var(--textual);
-}
-
-@media (max-width: 492px) {
-    .handlebar {
-        display: flex;
-    }
-    #feedbackPopup {
-        align-items: flex-end;
-    }
-    #popupElements {
-        transform: translateY(20px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    #feedbackPopup.active {
-        opacity: 1;
-    }
-    #popupElements.active {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    .popup-model {
-        margin-bottom: 16px;
-    }
 }
