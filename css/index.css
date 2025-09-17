@@ -66,6 +66,13 @@ hr {
     color: var(--textual);
 }
 
+.buttons-list {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+}
+
 .contact-me {
     padding: 10px 20px;
     border-radius: 12px;
@@ -75,13 +82,45 @@ hr {
     text-align: center;
     color: var(--background);
     cursor: pointer;
-    box-shadow: 0px 2px 12px rgba(83, 67, 209, 0.24), inset 0px 2px 1px #6F5DFF;
+    box-shadow: 0px 2px 12px rgba(83, 67, 209, 0.24), inset 0px 2px 1px var(--accent);
     font-weight: 600;
     transition: all 0.2s ease;
 }
 
 .contact-me:hover {
-    box-shadow: 0px 2px 16px rgba(83, 67, 209, 0.46), inset 0px 2px 1px #6F5DFF;
+    box-shadow: 0px 2px 16px rgba(83, 67, 209, 0.46), inset 0px 2px 1px var(--accent);
+}
+
+.view-cv {
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--accent);
+    cursor: pointer;
+    filter: drop-shadow(0px 2px 12px rgba(83, 67, 209, 0.24));
+    border: 1.5px solid var(--accent);
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.view-cv::after {
+    content: attr(data-full);
+}
+
+.view-cv:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+@media (max-width: 480px) {
+    .view-cv::after {
+        content: attr(data-short);
+    }
+    .buttons-list {
+        gap: 16px;
+}
 }
 
 .about-block {
