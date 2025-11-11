@@ -141,36 +141,8 @@ hr {
 .text-block {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    width: 100%;
-}
-
-.tag-list {
-    display: flex;
-    flex-direction: row;
     gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.tag-list::-webkit-scrollbar {
-    display: none;
-}
-
-.tag-item {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    white-space: nowrap;
-    padding: 4px 12px;
-    background: var(--tag-background);
-    border-radius: 8px;
-}
-
-.tag-item p {
-    color: var(--accent);
+    width: 100%;
 }
 
 .project-list {
@@ -205,9 +177,65 @@ hr {
     object-fit: cover;
 }
 
-.no-experience {
+.work-experience-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.work-experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.about-company {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.company-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.branding {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.company-logo {
+    height: 32px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+}
+
+.work-term {
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.company-description {
     color: var(--textual);
-    text-align: center;
+}
+
+.achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.whats-done {
+    color: var(--black);
+}
+
+.done-stroke {
+    color: var(--textual);
 }
 
 #feedbackPopup {

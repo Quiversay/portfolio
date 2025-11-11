@@ -1,12 +1,3 @@
-@media (max-width: 600px) {
-  .paragraph-xlarge {
-    font-size: 20px;
-  }
-  .paragraph-large {
-    font-size: 18px;
-  }
-}
-
 @media (max-width: 492px) {
     .handlebar {
         display: flex;
@@ -26,5 +17,29 @@
     }
     .popup-model {
         margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+  .paragraph-xlarge {
+    font-size: 20px;
+  }
+  .paragraph-large {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 639px) {
+    /* Resume */
+    .company-header {
+        justify-content: space-between;
+        gap: 8px;
+    }
+}
+
+@media (min-width: 640px) {
+    /* Resume */
+    .company-header {
+        gap: 12px;
     }
 }

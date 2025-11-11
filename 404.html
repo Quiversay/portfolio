@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiversay</title>
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
-    <script>
-        (function() {
-            const theme = localStorage.getItem('theme') || 'light-theme';
-            document.documentElement.classList.add(theme);
-        })();
-    </script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/404.css">
 </head>
@@ -61,13 +55,12 @@
     <div id="content" class="not-found-message">
         <img id="errorPage" src="" alt="Media">
         <div class="error-message">
-            <h1 data-translate="notFoundTitle" class="paragraph-large not-found-title"></h1>
-            <p data-translate="notFoundSubtitle" class="paragraph-regular not-found-subtitle"></p>
+            <h1 class="paragraph-large not-found-title">Упс! Страница не найдена</h1>
+            <p class="paragraph-regular not-found-subtitle">Похоже, такой страницы больше нет — или никогда не было.</p>
         </div>
-        <p data-translate="errorNumber" class="caption error-number"></p>
+        <p class="caption error-number">Код ошибки: 404</p>
     </div>
-    <p data-translate="loveMessage" class="caption love-message"></p>
+    <p class="caption love-message">Сделано с 💙</p>
     <script src="js/main.js"></script>
-    <script src="js/translation.js"></script>
 </body>
 </html>
