@@ -1,0 +1,218 @@
+/* Настройка тем */
+
+html {
+  --accent: #6050DC;
+  --transparent-background: rgba(255, 255, 255, 0.12);
+  --titleist: #202526;
+  --textual: #7B7179;
+  --backlighting: #EBEBEB;
+  --content: #F2F2F2;
+  --tag-background: #F1EFF9;
+  --overlay-background: #FFFFFF;
+  --background: #FAFAFA;
+  --blackout: rgba(0, 0, 0, 0.32);
+  --telegram-color: #0088CC;
+  --telegram-background: #E4F1FB;
+  --whatsapp-color: #25D366;
+  --whatsapp-background: #E0F3EA;
+  --mail-color: #FFA500;
+  --mail-background: #FFF3E0;
+  --phone-color: #228B22;
+  --phone-background: #FFF3E0;
+}
+
+/* Обычные настройки */
+
+* {
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, p {
+    margin: 0;
+}
+
+button {
+    border: none;
+}
+
+hr {
+    margin: 0;
+}
+
+ol {
+    margin: 0;
+}
+
+/* Разметка */
+
+.paragraph-xlarge {
+    font-size: 24px;
+    line-height: 1.6em;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+}
+
+.paragraph-large {
+    font-size: 20px;
+    line-height: 1.6em;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+}
+
+.paragraph-medium {
+    font-size: 18px;
+    line-height: 1.6em;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+}
+
+.paragraph-regular {
+    font-size: 16px;
+    line-height: 1.6em;
+    letter-spacing: 0.0018em;
+    font-weight: 400;
+}
+
+.paragraph-small {
+    font-size: 15px;
+    line-height: 1.6em;
+    letter-spacing: 0.0018em;
+    font-weight: 400;
+}
+
+.caption {
+    font-size: 14px;
+    line-height: 1.6em;
+    letter-spacing: 0.0018em;
+    font-weight: 400;
+}
+
+/* Установка шрифта */
+
+@font-face {
+    font-family: 'Inter Variable';
+    src: url('../assets/fonts/InterVariable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Inter Variable', sans-serif;
+}
+
+/* Анимация смены языка */
+
+[data-translate] {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+[data-translate].fade-out {
+  opacity: 0;
+}
+
+/* Основные настройки */
+
+body {
+    background: var(--background);
+    transition: all 0.4s ease;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+header {
+    height: 64px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    background: var(--transparent-background);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid var(--backlighting);
+    z-index: 9998;
+    box-sizing: border-box;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 998px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1rem, 5vw, 4rem);
+    padding-right: clamp(1rem, 5vw, 4rem);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+#content {
+    opacity: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 998px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1rem, 5vw, 4rem);
+    padding-right: clamp(1rem, 5vw, 4rem);
+    padding-top: 85px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.love-message {
+    color: var(--textual);
+    padding-bottom: 16px;
+}
+
+
+/* Splash Screen */
+
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
