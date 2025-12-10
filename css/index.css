@@ -1,0 +1,226 @@
+.avatar {
+    height: 112px;
+    width: 112px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+.about-author {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.name {
+    color: var(--titleist);
+}
+
+.role {
+    color: var(--textual);
+}
+
+.location-box {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+}
+
+.city {
+    color: var(--textual);
+}
+
+.buttons-list {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.contact-me {
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--background);
+    cursor: pointer;
+    box-shadow: 0px 2px 12px rgba(83, 67, 209, 0.24), inset 0px 2px 1px var(--accent);
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.contact-me:hover {
+    box-shadow: 0px 2px 16px rgba(83, 67, 209, 0.46), inset 0px 2px 1px var(--accent);
+}
+
+.view-cv {
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--accent);
+    cursor: pointer;
+    filter: drop-shadow(0px 2px 12px rgba(83, 67, 209, 0.24));
+    border: 1.5px solid var(--accent);
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.view-cv::after {
+    content: attr(data-full);
+}
+
+.view-cv:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+@media (max-width: 480px) {
+    .view-cv::after {
+        content: attr(data-short);
+    }
+}
+
+.about-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.title-text {
+    color: var(--titleist);
+}
+
+.company-name {
+    font-size: 20px;
+    line-height: 1.6em;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+    color: var(--titleist);
+}
+
+.description-text {
+    color: var(--textual);
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.project-list::-webkit-scrollbar {
+    display: none;
+}
+
+.project-item {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    height: 180px;
+    width: 270px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--content);
+    scroll-snap-align: start;
+}
+
+.project-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.work-experience-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.work-experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.about-company {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.company-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.work-term {
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.whats-done {
+    color: var(--black);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style-position: inside
+}
+
+.done-stroke {
+    color: var(--textual);
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skill-title {
+    font-size: 20px;
+    line-height: 1.6em;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+    color: var(--titleist);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 8px;
+}
+
+.skill-object {
+    color: var(--textual);
+}
